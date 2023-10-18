@@ -129,32 +129,31 @@ header {
     font-size: 40px;
 }
 
-section{
+section {
     margin: 100px auto;
-    /*border-bottom: 1px solid var(--light-blue);*/
 }
 
-#modules{
+#modules {
     width: 800px;
 }
 
-.headline-text{
+.headline-text {
     text-transform: uppercase;
 }
 
-#modules__title{
+#modules__title {
     font-size: 2rem;
     font-weight: bold;
     letter-spacing: 4px;
     margin-bottom: 10px;
 }
 
-.description-text{
+.description-text {
     font-size: 1rem;
     font-weight: 400;
 }
 
-.modules__box{
+.modules__box {
     width: 33.4rem;
     height: 3.2rem;
     border-radius: 3.6rem;
@@ -164,15 +163,15 @@ section{
     margin: 5px;
 }
 
-.border-round-blue{
+.border-round-blue {
     border: double 0.13rem transparent;
     border-radius: 3.6rem;
-    background-image: linear-gradient(#252525, #252525), radial-gradient(circle at top left, #33A8DB,#1472B7);
+    background-image: linear-gradient(#252525, #252525), radial-gradient(circle at top left, #33A8DB, #1472B7);
     background-origin: border-box;
     background-clip: padding-box, border-box;
 }
 
-#breather{
+#breather {
     height: 560px;
     background-size: cover;
     background-image: url(assets/images/woman-code.png);
@@ -191,35 +190,139 @@ section{
     text-align: left;
 }
 
-#benefits{
+#benefits {
     text-align: center;
     width: 800px;
 }
 
-#benefits h2{
+#benefits h2 {
     font-size: 2rem;
     font-weight: bold;
     letter-spacing: 4px;
     margin-bottom: 24px;
 }
 
-footer{
+footer {
     padding: 60px 0;
     text-align: center;
     background-image: linear-gradient(rgba(50, 168, 219, .0), rgba(50, 168, 219, .2));
     border-top: 1px solid var(--light-blue);
 }
 
-footer p{
+footer p {
     margin-top: -1rem;
 }
 
-footer a{
+footer a {
     text-decoration: none;
 }
 
-footer .blue-text{
+footer .blue-text {
     font-weight: bolder;
 }
 
 /*TODO: Add Media Queries*/
+/*TODO Make Images auto-fit bellow 800px*/
+@media (min-width: 290px) and (max-width: 800px) {
+    #banner, #modules, #breather, #benefits, #benefits img, #footer {
+        width: 100vw;
+        padding: 1rem;
+    }
+    #breather {
+        padding: 20px;
+    }
+
+    #breather h2 {
+        font-size: 1.5rem;
+        margin: 13rem  auto auto 0;
+    }
+}
+
+@media (max-width: 800px){
+    #breather {
+        background-position-x: -15rem;
+    }
+    #breather h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .modules__box {
+        width: 28rem;
+        height: 5rem;
+    }
+
+  .modules__box p {
+      line-height: 28px;
+      margin: 1.5rem auto auto;
+  }
+
+    #breather {
+        background-position-x: -25rem;
+    }
+
+    #breather h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modules__box {
+        width: 20rem;
+        height: 5rem;
+    }
+
+    .modules__box p {
+        line-height: 16px;
+        margin: 1.5rem auto auto;
+    }
+
+    #breather {
+        background-position-x: -25rem;
+    }
+}
+
+@media (max-width: 360px) {
+    #banner {
+        gap: 0;
+        margin: auto auto 75px;
+        text-align: center;
+    }
+
+    #banner__button {
+        width: 16rem;
+    }
+
+    #banner__button span {
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+    }
+
+    .modules__box {
+        width: 15rem;
+        height: 5rem;
+    }
+
+    .modules__box p {
+        line-height: 18px;
+        margin: 1.5rem auto auto;
+    }
+
+    .description-text {
+        padding: 2rem;
+    }
+
+    #breather {
+        background-position-x: -30rem;
+    }
+
+    #benefits h2{
+        letter-spacing: 3px;
+    }
+
+    footer img{
+        width: 260px;
+    }
+}
