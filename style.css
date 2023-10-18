@@ -1,0 +1,28 @@
+*{
+    --blue-text: #3348db;
+}
+
+.blue-text{
+    color: var(--blue-text);
+}
+
+.headline-text{
+    text-transform: uppercase;
+}
+
+#banner_button{
+    background-color: transparent;
+    width: 326px;
+    height:auto;
+    top: 473px;
+    left: 557px;
+    padding: 19px 91px 19px 91px;
+    border: 2px solid var(--blue-text);
+    margin: 31px;
+
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 19px;
+    align-self: center;
+    justify-content: center;
+}
