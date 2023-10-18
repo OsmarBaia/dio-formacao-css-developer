@@ -9,6 +9,8 @@
     font-family: 'Raleway', sans-serif;
     --blue-text: #3348db;
     --white-text: #FFFFFF;
+
+    box-sizing: border-box;
 }
 
 .white-text{
@@ -29,7 +31,7 @@
 }
 
 .blue-border{
-    border: 2px solid;
+    border: 0.13rem solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(180deg, #33A8DB 0%, #1472B7 100%);
 }
@@ -38,49 +40,57 @@
     text-transform: uppercase;
 }
 
-body{
-    width: 100vw;
-    background-color: black;
-}
-
-header{
-    width: 100%;
-    background: url("assets/images/banner.png") no-repeat;
-    background-position-x: -1rem;
-}
-
-#banner{
-    height: 605px;
+.flex-colum-center{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    background: linear-gradient(180deg, rgba(0,0,0,.4) 0%, rgba(30, 170, 220, 0.15) 50%, rgba(0,0,0,.1) 100%);
+    gap:1rem;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+/* Banner */
+header{
+    width: 100%;
+    background: url("assets/images/banner.png") no-repeat;
+    background-position-x: -1rem;
+    background-size: cover;
+
+    height: 600px;
+    padding-top: 60px;
+    border-bottom: 1px solid #33A8DB80;
+}
+
+#banner{
+    height: 37.8rem;
+    background: linear-gradient(180deg, rgba(0,0,0,.6), rgba(49, 168, 221, 0.2) 50%, rgba(0,0,0,.6));
 }
 
 #banner div{
-    width: 510px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-
+    width: 320rem;
     text-align: center;
     margin: 0 auto;
 }
 
 #banner__logo{
-    width:  268px;
-    height: 268px;
+    width:  16.8rem;
+    height: 16.8rem;
 
     border-radius: 50%;
     background-color: rgba(0,0,0,0.2);
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(0.07rem);
+
 }
+
 #banner__logo img{
     width: 100%;
     margin-top: 1rem;
+    object-fit: contain;
 }
 
 #banner__title{
@@ -95,15 +105,91 @@ header{
 }
 
 #banner_button{
-    width: 326px;
-    height: 57px;
+    width: 20.4rem;
+    height: 3.6rem;
 
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 900;
     background-color: transparent;
     align-self: center;
     padding: 1rem;
     margin: 1rem;
 
-    letter-spacing: 3px;
+    letter-spacing: 0.19rem;
 }
+
+/* Modules */
+#modules{
+    width: 100vw;
+    padding: 2rem;
+}
+
+#modules > div{
+    width: 49.5rem;
+    height: 20.3rem;
+
+    margin: auto;
+    padding: 1rem;
+
+    gap: 1.5rem;
+}
+
+#modules > div p{
+    text-align: center;
+}
+
+#modules__title{
+    letter-spacing: 0.3rem;
+}
+
+.modules__box{
+    width: 33.4rem;
+    height: 3.2rem;
+    border-radius: 3.6rem;
+    background-color: #252525;
+    text-align: center;
+    line-height: 3.2rem;
+}
+
+.blue-border-round{
+    border: double 0.13rem transparent;
+    border-radius: 3.6rem;
+    background-image: linear-gradient(#252525, #252525), radial-gradient(circle at top left, #33A8DB,#1472B7);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.description-text{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#breather{
+    width: 100vw;
+    height: 22.8rem;
+
+    background-image: url("assets/images/woman-code.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -6rem;
+    position: relative;
+}
+
+#breather h2{
+    font-weight: 900;
+    text-shadow: 0.13rem 0.07rem #33A8DB;
+
+    position: absolute;
+    top: 40%;
+    left: 16%;
+}
+
+#benefits{
+    padding: 5rem;
+    text-align: center;
+}
+
+#benefits p{
+    font-weight: 300;
+}
+
