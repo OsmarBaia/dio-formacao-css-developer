@@ -1,162 +1,152 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
-*{
+* {
+    /*Box Model*/
     margin: 0;
     padding: 0;
-    background-color: transparent;
-
-    font-family: 'Raleway', sans-serif;
-    --blue-text: #3348db;
-    --white-text: #FFFFFF;
-
     box-sizing: border-box;
+
+    /*Text*/
+    color: var(--light-color);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+
+
+    /* Colors */
+    --light-color: #FFFFFF;
+    --darkc-color: #000000;
+    --light-gray: #252525;
+    --light-blue: #33A8DB;
+    --dark-blue: #1472B7;
+    background-color: transparent;
 }
 
-.white-text{
-    color: var(--white-text);
+body {
+    width: 100vw;
+    background-color: var(--darkc-color);
 }
 
-.blue-text{
-    /*color: var(--blue-text);*/
-    background-color: var(--blue-text);
-    background-image: linear-gradient(180deg, #33A8DB 0%, #1472B7 100%);
+.flex-colum-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+main {
+    width: 100%;
+    gap: 100px;
+}
+
+.blue-text {
+    color: transparent;
     background-size: 100%;
+    background: -webkit-linear-gradient(#33A8DB, #1472B7);
+    background-clip: text;
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
 }
 
-.blue-border{
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6)), url(assets/images/banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    padding-top: 60px;
+    border-bottom: 1px solid var(--light-blue);
+}
+
+#banner {
+    gap: 0;
+    width: 600px;
+    margin: auto auto 75px;
+    text-align: center;
+}
+
+#banner__content {
+    color: var(--light-color);
+    width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+#banner__logo {
+    background-color: rgba(0, 0, 0, .2);
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+    padding: 16px;
+    margin: auto auto 16px;
+}
+
+#banner__logo img {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#banner__title {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+#banner__text {
+    font-size: 1.25rem;
+    margin: 16px 0 24px;
+}
+
+.border-square-blue {
     border: 0.13rem solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient(180deg, #33A8DB 0%, #1472B7 100%);
+    border-image-source: linear-gradient(180deg, var(--light-blue) 0%, var(--dark-blue) 100%);
+}
+
+#banner__button {
+    width: 19.7rem;
+    height: 3.4rem;
+    align-self: center;
+    padding: 16px;
+    background-color: transparent;
+}
+
+
+#banner__button span {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+#banner__title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+section{
+    margin: 100px auto;
+    /*border-bottom: 1px solid var(--light-blue);*/
+}
+
+#modules{
+    width: 800px;
 }
 
 .headline-text{
     text-transform: uppercase;
 }
 
-.flex-colum-center{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap:1rem;
-}
-
-body{
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-}
-
-/* Banner */
-header{
-    width: 100%;
-    background: url("assets/images/banner.png") no-repeat;
-    background-position-x: -1rem;
-    background-size: cover;
-
-    height: 600px;
-    padding-top: 60px;
-    border-bottom: 1px solid #33A8DB80;
-}
-
-#banner{
-    height: 37.8rem;
-    background: linear-gradient(180deg, rgba(0,0,0,.6), rgba(49, 168, 221, 0.2) 50%, rgba(0,0,0,.6));
-}
-
-#banner div{
-    width: 320rem;
-    text-align: center;
-    margin: 0 auto;
-}
-
-#banner__logo{
-    width:  16.8rem;
-    height: 16.8rem;
-
-    border-radius: 50%;
-    background-color: rgba(0,0,0,0.2);
-    backdrop-filter: blur(0.07rem);
-
-}
-
-#banner__logo img{
-    width: 100%;
-    margin-top: 1rem;
-    object-fit: contain;
-}
-
-#banner__title{
-    text-align: center;
-    font-weight: 900;
-}
-
-#banner__text{
-    text-align: justify;
-    font-size: 1.25rem;
-    font-weight: 400;
-}
-
-#banner_button{
-    width: 20.4rem;
-    height: 3.6rem;
-
-    font-size: 1rem;
-    font-weight: 900;
-    background-color: transparent;
-    align-self: center;
-    padding: 1rem;
-    margin: 1rem;
-
-    letter-spacing: 0.19rem;
-}
-
-/* Modules */
-#modules{
-    width: 100vw;
-    padding: 2rem;
-}
-
-#modules > div{
-    width: 49.5rem;
-    height: 20.3rem;
-
-    margin: auto;
-    padding: 1rem;
-
-    gap: 1.5rem;
-}
-
-#modules > div p{
-    text-align: center;
-}
-
 #modules__title{
-    letter-spacing: 0.3rem;
-}
-
-.modules__box{
-    width: 33.4rem;
-    height: 3.2rem;
-    border-radius: 3.6rem;
-    background-color: #252525;
-    text-align: center;
-    line-height: 3.2rem;
-}
-
-.blue-border-round{
-    border: double 0.13rem transparent;
-    border-radius: 3.6rem;
-    background-image: linear-gradient(#252525, #252525), radial-gradient(circle at top left, #33A8DB,#1472B7);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
 }
 
 .description-text{
@@ -164,32 +154,72 @@ header{
     font-weight: 400;
 }
 
-#breather{
-    width: 100vw;
-    height: 22.8rem;
-
-    background-image: url("assets/images/woman-code.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: -6rem;
-    position: relative;
+.modules__box{
+    width: 33.4rem;
+    height: 3.2rem;
+    border-radius: 3.6rem;
+    background-color: var(--light-gray);
+    text-align: center;
+    line-height: 3.2rem;
+    margin: 5px;
 }
 
-#breather h2{
-    font-weight: 900;
-    text-shadow: 0.13rem 0.07rem #33A8DB;
+.border-round-blue{
+    border: double 0.13rem transparent;
+    border-radius: 3.6rem;
+    background-image: linear-gradient(#252525, #252525), radial-gradient(circle at top left, #33A8DB,#1472B7);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
 
-    position: absolute;
-    top: 40%;
-    left: 16%;
+#breather{
+    height: 560px;
+    background-size: cover;
+    background-image: url(assets/images/woman-code.png);
+    background-attachment: fixed;
+    border-top: 1px solid var(--light-blue);
+    border-bottom: 1px solid var(--light-blue);
+    padding: 200px;
+}
+
+#breather h2 {
+    max-width: 250px;
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-transform: lowercase;
+    text-shadow: 0.19rem 0.13rem var(--light-blue);
+    text-align: left;
 }
 
 #benefits{
-    padding: 5rem;
     text-align: center;
+    width: 800px;
 }
 
-#benefits p{
-    font-weight: 300;
+#benefits h2{
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 24px;
 }
 
+footer{
+    padding: 60px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(50, 168, 219, .0), rgba(50, 168, 219, .2));
+    border-top: 1px solid var(--light-blue);
+}
+
+footer p{
+    margin-top: -1rem;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer .blue-text{
+    font-weight: bolder;
+}
+
+/*TODO: Add Media Queries*/
