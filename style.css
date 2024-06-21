@@ -23,13 +23,9 @@
     background-color: transparent;
 }
 
-html{
-
-}
-
 body {
-    min-width: 300px;
     width: 100vw;
+    min-width: 300px;
     background-color: var(--darkc-color);
 }
 
