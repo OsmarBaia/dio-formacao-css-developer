@@ -17,37 +17,74 @@
 <body>
 <header class="navbar row flex align-itens-center justify-content-space-between">
     <div class="nav-logo flex flex-row align-itens-center justify-content-space-between">
-        <button aria-label="abrir-menu" class="nav-btn"><i class="fa-solid fa-bars"></i></button>
+        <button aria-label="abrir-menu" class="nav-btn"><i class="fa-solid fa-bars navbar-icon"></i></button>
         <picture class="image">
              <a href="#"><img class="nav-logo" src="./assets/images/youtube-logo.png" alt="Youtube Logo"></a>
         </picture>
     </div>
-    <form class="nav-search">
+    <form class="nav-search flex flex-row align-itens-center justify-content-space-between">
         <input aria-label="campo-de-busca" type="text" id="searchTerms" name="searchTerms" placeholder="Pesquisar">
-        <button type="submit" class="search-btn" ><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button aria-label="botão-de-busca" type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
     </form>
     <nav class="nav-menu">
         <ul class="navLinks-container flex flex-row align-itens-center justify-content-space-between">
-            <li class="navLinks"><i class="fa-solid fa-video"></i></li>
-            <li class="navLinks"><i class="fa-solid fa-bell"></i></li>
+            <li class="navLinks"><i class="fa-solid fa-video navbar-icon"></i></li>
+            <li class="navLinks"><i class="fa-solid fa-bell navbar-icon"></i></li>
             <li class="navLinks"></li>
         </ul>
     </nav>
 </header>
-<aside>
-    <nav class="side-menu nav-menu">
-        <button aria-label="fechar-menu" class="nav-btn"><i class="fa-solid fa-bars"></i></button>
-        <picture class="nav-logo">
-            <img src="./assets/images/youtube-logo.png" alt="Youtube Logo">
-        </picture>
-        <ul class="navLink-container">
-            <li class="nav-link"></li>
-            <li class="nav-link"></li>
-            <li class="nav-link"></li>
-            <li class="nav-link"></li>
-            <li class="nav-link"></li>
-        </ul>
-    </nav>
-</aside>
+<!--<aside>-->
+<!--    <nav class="side-menu nav-menu">-->
+<!--        <button aria-label="fechar-menu" class="nav-btn"><i class="fa-solid fa-bars"></i></button>-->
+<!--        <picture class="nav-logo">-->
+<!--            <img src="./assets/images/youtube-logo.png" alt="Youtube Logo">-->
+<!--        </picture>-->
+<!--        <ul class="navLink-container">-->
+<!--            <li class="nav-link"></li>-->
+<!--            <li class="nav-link"></li>-->
+<!--            <li class="nav-link"></li>-->
+<!--            <li class="nav-link"></li>-->
+<!--            <li class="nav-link"></li>-->
+<!--        </ul>-->
+<!--    </nav>-->
+<!--</aside>-->
+<main class="container">
+    <div class="flex flex-row align-itens-start justify-content-end">
+        <section class="video-container flex-row justify-content-end">
+            <div id="player-container" class="flex-column align-itens-end">
+                <picture class="image">
+                    <img src="" alt="video thumbnail">
+                </picture>
+                <h2 class="roboto-medium heading video-title">Title</h2>
+                <div>
+                    <!--Channel & Video Menu-->
+                    <picture class="image">
+                        <img src="" alt="channel thumbnail">
+                    </picture>
+                    <button>Inscreva-se</button>
+                    <button>Like</button>
+                    <button>Dislike</button>
+                    <button>Compartilhar</button>
+                    <button>Download</button>
+                </div>
+                <h3 class="roboto-medium video-stats">statistics</h3>
+                <p class="roboto-regular video-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad architecto beatae dicta error expedita fuga impedit inventore maxime minima nemo nulla odio quas quibusdam, sequi veniam voluptatem voluptates, voluptatibus.</p>
+            </div>
+        </section>
+        <aside id="cards-container" class="video-cards column flex flex-column justify-content-start">
+           <div class="video-card-container row flex-row align-itens-center justify-content-space-between">
+               <picture class="image">
+                   <img src="" alt="video-card thumbnail">
+               </picture>
+               <div class="heading video-card-info">
+                   <h3 class="roboto-medium video-card-title">Title</h3>
+                   <p class="roboto-regular video-card-stats">1.2mil views </p>
+                   <p class="roboto-regular video-card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores aspernatur autem cupiditate esse ex minus recusandae. Fuga in itaque laudantium tempora ullam! Accusantium aspernatur assumenda esse ex molestiae obcaecati?</p>
+               </div>
+           </div>
+        </aside>
+    </div>
+</main>
 </body>
 </html>

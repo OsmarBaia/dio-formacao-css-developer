@@ -64,6 +64,10 @@ button{
     background-color: transparent;
 }
 
+ul li {
+    list-style: none;
+}
+
 .container{
     width: 100%;
     height: 100%;
@@ -85,14 +89,32 @@ button{
     flex-direction: row;
 }
 
+.flex-column{
+    flex-direction: column;
+}
+
 .align-itens-center{
-    display: flex;
     align-items: center;
 }
 
+.align-itens-start{
+    align-items: flex-start;
+}
+
+.align-itens-end{
+    align-items: flex-end;
+}
+
+
 .justify-content-space-between{
-    display: flex;
     justify-content: space-between;
+}
+
+.justify-content-start{
+    justify-content: flex-start;
+}
+.justify-content-end{
+    justify-content: flex-end;
 }
 
 img{
@@ -143,6 +165,23 @@ img{
     font-style: normal;
 }
 
+
+/*
+* ------------------------------
+*
+*           Headings
+*
+* ------------------------------
+*/
+h2.heading{
+    font-size: 1.25rem;
+}
+
+h3.heading{
+    font-size: 0.875rem;
+}
+
+
 /*
 * ------------------------------
 *
@@ -155,11 +194,18 @@ img{
     padding: 0 24px;
     height: 56px;
     border: 1px solid red;
+    position: fixed;
 }
 
 .navbar .nav-logo{
     width: 146px;
     height: 24px;
+}
+
+.navbar-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 18px;
 }
 
 .navbar .nav-logo button{
@@ -184,6 +230,84 @@ img{
     max-height: 100%;
 }
 
-.navLinks{
-    list-style: none;
+.nav-menu{
+    width: 130px;
+    height: 34px;
 }
+
+.nav-search{
+    width: 404px;
+    height: 40px;
+    border: 1px solid;
+    border-color: var(--border-color);
+}
+
+.nav-search input{
+    padding-left: 1rem;
+    height: 100%;
+    width: 100%;
+}
+
+.nav-search .search-btn{
+    width: 56px;
+    height: 39px;
+    background-color: var(--button-bg);
+    border-left: 1px solid;
+    border-color: var(--border-color);
+}
+
+/* TODO: Fix button visual feedback on click*/
+
+.navbar-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 18px;
+}
+
+
+
+/*
+* ------------------------------
+*
+*           Main
+*
+* ------------------------------
+*/
+
+main > div.flex{
+    padding: 5.25rem 1rem;
+    gap: 1.5625rem;
+}
+/*
+
+            Video Player
+
+*/
+
+main section.video-container{
+    width: 1027px;
+    padding-left: 4.6875rem;
+}
+
+#player-container{
+    width: 952px;
+    align-self: flex-end;
+}
+
+/*
+
+            Video Cards
+
+*/
+main.container aside.video-cards{
+    width: 372px;
+}
+
+/*
+* ------------------------------
+*
+*           Media Queries
+*
+* ------------------------------
+*/
+
