@@ -14,7 +14,7 @@
 
     <title>Projeto - Youtube</title>
 </head>
-<body>
+<body class="flex flex-column align-itens-center">
 <header class="navbar row flex align-itens-center justify-content-space-between">
     <div class="nav-logo flex flex-row align-itens-center justify-content-space-between">
         <button aria-label="abrir-menu" class="nav-btn"><i class="fa-solid fa-bars navbar-icon"></i></button>
@@ -28,61 +28,130 @@
     </form>
     <nav class="nav-menu">
         <ul class="navLinks-container flex flex-row align-itens-center justify-content-space-between">
-            <li class="navLinks"><i class="fa-solid fa-video navbar-icon"></i></li>
-            <li class="navLinks"><i class="fa-solid fa-bell navbar-icon"></i></li>
-            <li class="navLinks"></li>
+            <li aria-label="botão-transmitir" class="navLinks"><i class="fa-solid fa-video navbar-icon"></i></li>
+            <li aria-label="botão-notificações" class="navLinks"><i class="fa-solid fa-bell navbar-icon"></i></li>
+            <li aria-label="botão-perfil-usuário" class="navLinks user-avatar"><i class="fa-solid fa-user navbar-icon"></i></li>
         </ul>
     </nav>
 </header>
-<!--<aside>-->
-<!--    <nav class="side-menu nav-menu">-->
-<!--        <button aria-label="fechar-menu" class="nav-btn"><i class="fa-solid fa-bars"></i></button>-->
-<!--        <picture class="nav-logo">-->
-<!--            <img src="./assets/images/youtube-logo.png" alt="Youtube Logo">-->
-<!--        </picture>-->
-<!--        <ul class="navLink-container">-->
-<!--            <li class="nav-link"></li>-->
-<!--            <li class="nav-link"></li>-->
-<!--            <li class="nav-link"></li>-->
-<!--            <li class="nav-link"></li>-->
-<!--            <li class="nav-link"></li>-->
-<!--        </ul>-->
-<!--    </nav>-->
-<!--</aside>-->
 <main class="container">
     <div class="flex flex-row align-itens-start justify-content-end">
-        <section class="video-container flex-row justify-content-end">
-            <div id="player-container" class="flex-column align-itens-end">
-                <picture class="image">
-                    <img src="" alt="video thumbnail">
-                </picture>
-                <h2 class="roboto-medium heading video-title">Title</h2>
-                <div>
+        <section class="video-container  ">
+            <div id="player-container" class="flex flex-column align-itens-start">
+                <iframe src="https://www.youtube.com/embed/FZgIQUDn8zo?si=ZP1gQ8Ei_bpw_g7O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h2 class="roboto-bold heading video-title">Semana Front-end | Dia 01: Construindo uma Landing Page no Mundo Invertido com HTML e CSS</h2>
+                <div id="channel-bar" class="flex flex-row align-itens-center justify-content-space-between">
                     <!--Channel & Video Menu-->
-                    <picture class="image">
-                        <img src="" alt="channel thumbnail">
-                    </picture>
-                    <button>Inscreva-se</button>
-                    <button>Like</button>
-                    <button>Dislike</button>
-                    <button>Compartilhar</button>
-                    <button>Download</button>
+                    <div id="channel-badge" class="flex flex-row align-itens-center justify-content-space-between">
+                        <picture class="image">
+                            <img src="./assets/images/ChannelAvatar.png" alt="channel thumbnail">
+                        </picture>
+                        <div id="channel-badge-info" class="flex flex-column">
+                            <h3 class="roboto-bold heading">DIO</h3>
+                            <p>83,3 mil inscritos</p>
+                        </div>
+                    </div>
+                    <button id="subscribe-button" class="roboto-bold">Inscreva-se</button>
+                    <button class="flex flex-row align-itens-center justify-content-space-between roboto-semibold"><i class="fa-regular fa-thumbs-up navbar-icon"></i>2 mil</button>
+                    <button class="flex flex-row align-itens-center justify-content-space-between roboto-semibold"><i class="fa-regular fa-thumbs-down navbar-icon"></i>Não gostei</button>
+                    <button class="flex flex-row align-itens-center justify-content-space-between roboto-semibold"><i class="fa-solid fa-share-nodes navbar-icon"></i>Compartilhar</button>
+                    <button class="flex flex-row align-itens-center justify-content-space-between roboto-semibold"><i class="fa-solid fa-download navbar-icon"></i>Download</button>
                 </div>
-                <h3 class="roboto-medium video-stats">statistics</h3>
-                <p class="roboto-regular video-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad architecto beatae dicta error expedita fuga impedit inventore maxime minima nemo nulla odio quas quibusdam, sequi veniam voluptatem voluptates, voluptatibus.</p>
+                <h3 class="roboto-bold video-stats">28.418 visualizações Transmitido ao vivo em 23 ago. de 2022</h3>
+                <p class="roboto-regular video-description">Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS. Para isso, criaremos uma landing page com a temática da série Stranger Things, a qual contará com a implementação de um theme switcher (light e dark) para explorarmos os mistérios do mundo invertido.</p>
             </div>
         </section>
         <aside id="cards-container" class="video-cards column flex flex-column justify-content-start">
-           <div class="video-card-container row flex-row align-itens-center justify-content-space-between">
+            <div class="card-container row flex flex-row align-itens-center justify-content-space-between">
                <picture class="image">
-                   <img src="" alt="video-card thumbnail">
+                   <img src="./assets/images/CursoPreview-1.png" alt="video-card thumbnail">
                </picture>
-               <div class="heading video-card-info">
-                   <h3 class="roboto-medium video-card-title">Title</h3>
-                   <p class="roboto-regular video-card-stats">1.2mil views </p>
-                   <p class="roboto-regular video-card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores aspernatur autem cupiditate esse ex minus recusandae. Fuga in itaque laudantium tempora ullam! Accusantium aspernatur assumenda esse ex molestiae obcaecati?</p>
+               <div class="video-card-info flex flex-column align-itens-start justify-content-space-between">
+                   <h3 class="roboto-medium heading video-card-title">Geração Tech Unimed - BH - Ciência de Dados</h3>
+                   <p class="roboto-regular video-card-channel">Digital Innovation One</p>
+                   <p class="roboto-regular video-card-stats">2,1 mil visualizações <br> Transmitido há 2 dias </p>
                </div>
-           </div>
+            </div>
+            <div class="card-container row flex flex-row align-itens-center justify-content-space-between">
+               <picture class="image">
+                   <img src="./assets/images/CursoPreview-2.png" alt="video-card thumbnail">
+               </picture>
+               <div class="video-card-info flex flex-column align-itens-start justify-content-space-between">
+                   <h3 class="roboto-medium heading video-card-title">Scrum Talks</h3>
+                   <p class="roboto-regular video-card-channel">Digital Innovation One</p>
+                   <p class="roboto-regular video-card-stats">1,6 mil visualizações <br> Transmitido há 3 dias </p>
+               </div>
+            </div>
+            <div class="card-container row flex flex-row align-itens-center justify-content-space-between">
+               <picture class="image">
+                   <img src="./assets/images/CursoPreview-3.png" alt="video-card thumbnail">
+               </picture>
+               <div class="video-card-info flex flex-column align-itens-start justify-content-space-between">
+                   <h3 class="roboto-medium heading video-card-title">Machine Learning Avançado - Fast Track</h3>
+                   <p class="roboto-regular video-card-channel">Digital Innovation One</p>
+                   <p class="roboto-regular video-card-stats">1,7 mil visualizações <br> Transmitido há 4 dias </p>
+               </div>
+            </div>
+            <div class="card-container row flex flex-row align-itens-center justify-content-space-between">
+               <picture class="image">
+                   <img src="./assets/images/CursoPreview-4.png" alt="video-card thumbnail">
+               </picture>
+               <div class="video-card-info flex flex-column align-itens-start justify-content-space-between">
+                   <h3 class="roboto-medium heading video-card-title">Global Skills #2 - Project Planning</h3>
+                   <p class="roboto-regular video-card-channel">Digital Innovation One</p>
+                   <p class="roboto-regular video-card-stats">971 visualizações <br> Transmitido há 5 dias </p>
+               </div>
+            </div>
+            <div class="card-container row flex flex-row align-itens-center justify-content-space-between">
+               <picture class="image">
+                   <img src="./assets/images/CursoPreview-5.png" alt="video-card thumbnail">
+               </picture>
+               <div class="video-card-info flex flex-column align-itens-start justify-content-space-between">
+                   <h3 class="roboto-medium heading video-card-title">Como aprender a programar Python do ZERO</h3>
+                   <p class="roboto-regular video-card-channel">Digital Innovation One</p>
+                   <p class="roboto-regular video-card-stats">711 visualizações <br> Transmitido há 6 dias </p>
+               </div>
+            </div>
+            <div class="card-container row flex flex-row align-itens-center justify-content-space-between">
+                <picture class="image">
+                    <img src="./assets/images/CursoPreview-1.png" alt="video-card thumbnail">
+                </picture>
+                <div class="video-card-info flex flex-column align-itens-start justify-content-space-between">
+                    <h3 class="roboto-medium heading video-card-title">Geração Tech Unimed - BH - Ciência de Dados</h3>
+                    <p class="roboto-regular video-card-channel">Digital Innovation One</p>
+                    <p class="roboto-regular video-card-stats">2,1 mil visualizações <br> Transmitido há 2 dias </p>
+                </div>
+            </div>
+            <div class="card-container row flex flex-row align-itens-center justify-content-space-between">
+                <picture class="image">
+                    <img src="./assets/images/CursoPreview-2.png" alt="video-card thumbnail">
+                </picture>
+                <div class="video-card-info flex flex-column align-itens-start justify-content-space-between">
+                    <h3 class="roboto-medium heading video-card-title">Scrum Talks</h3>
+                    <p class="roboto-regular video-card-channel">Digital Innovation One</p>
+                    <p class="roboto-regular video-card-stats">1,6 mil visualizações <br> Transmitido há 3 dias </p>
+                </div>
+            </div>
+            <div class="card-container row flex flex-row align-itens-center justify-content-space-between">
+                <picture class="image">
+                    <img src="./assets/images/CursoPreview-3.png" alt="video-card thumbnail">
+                </picture>
+                <div class="video-card-info flex flex-column align-itens-start justify-content-space-between">
+                    <h3 class="roboto-medium heading video-card-title">Machine Learning Avançado - Fast Track</h3>
+                    <p class="roboto-regular video-card-channel">Digital Innovation One</p>
+                    <p class="roboto-regular video-card-stats">1,7 mil visualizações <br> Transmitido há 4 dias </p>
+                </div>
+            </div>
+            <div class="card-container row flex flex-row align-itens-center justify-content-space-between">
+                <picture class="image">
+                    <img src="./assets/images/CursoPreview-4.png" alt="video-card thumbnail">
+                </picture>
+                <div class="video-card-info flex flex-column align-itens-start justify-content-space-between">
+                    <h3 class="roboto-medium heading video-card-title">Global Skills #2 - Project Planning</h3>
+                    <p class="roboto-regular video-card-channel">Digital Innovation One</p>
+                    <p class="roboto-regular video-card-stats">971 visualizações <br> Transmitido há 5 dias </p>
+                </div>
+            </div>
         </aside>
     </div>
 </main>

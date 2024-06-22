@@ -22,8 +22,9 @@
     --button-color: #CC0000;
     --button-bg: #F8F8F8;
     --border-color: #CCC;
+    --base-size: 16px;
+    font-size: var(--base-size);
 }
-
 
 /*
 * ------------------------------
@@ -54,10 +55,15 @@ html{
     height: 100lvw;
 }
 
+body, header{
+    max-width: 90rem;
+}
+
 body{
     width: 100%;
     height: 100%;
-    min-width: 280px;
+    min-width: 17.5rem; /* 280px / 16 */
+    margin: 0 auto;
 }
 
 button{
@@ -104,7 +110,6 @@ ul li {
 .align-itens-end{
     align-items: flex-end;
 }
-
 
 .justify-content-space-between{
     justify-content: space-between;
@@ -153,6 +158,12 @@ img{
     font-style: normal;
 }
 
+.roboto-semibold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
 .roboto-bold {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
@@ -165,7 +176,6 @@ img{
     font-style: normal;
 }
 
-
 /*
 * ------------------------------
 *
@@ -174,13 +184,12 @@ img{
 * ------------------------------
 */
 h2.heading{
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* 20px / 16 */
 }
 
 h3.heading{
-    font-size: 0.875rem;
+    font-size: 0.875rem; /* 14px / 16 */
 }
-
 
 /*
 * ------------------------------
@@ -189,39 +198,38 @@ h3.heading{
 *
 * ------------------------------
 */
-
 .navbar{
-    padding: 0 24px;
-    height: 56px;
-    border: 1px solid red;
+    padding: 0 1.5rem; /* 24px / 16 */
+    height: 3.5rem; /* 56px / 16 */
     position: fixed;
+    background-color: var(--foreground-color);
 }
 
 .navbar .nav-logo{
-    width: 146px;
-    height: 24px;
+    width: 9.125rem; /* 146px / 16 */
+    height: 1.5rem; /* 24px / 16 */
 }
 
 .navbar-icon {
-    width: 24px;
-    height: 24px;
-    font-size: 18px;
+    width: 1.5rem; /* 24px / 16 */
+    height: 1.5rem; /* 24px / 16 */
+    font-size: 1.125rem; /* 18px / 16 */
 }
 
 .navbar .nav-logo button{
-    width: 24px;
-    height: 24px;
+    width: 1.5rem; /* 24px / 16 */
+    height: 1.5rem; /* 24px / 16 */
     background-color: transparent;
 }
 
 .navbar .nav-logo button i{
-    font-size: 22px;
+    font-size: 1.375rem; /* 22px / 16 */
     font-weight: lighter;
 }
 
 .navbar .image{
-    width: 90px;
-    height: 20px;
+    width: 5.625rem; /* 90px / 16 */
+    height: 1.25rem; /* 20px / 16 */
     position: relative;
 }
 
@@ -231,40 +239,39 @@ h3.heading{
 }
 
 .nav-menu{
-    width: 130px;
-    height: 34px;
+    width: 8.125rem; /* 130px / 16 */
+    height: 2.125rem; /* 34px / 16 */
 }
 
 .nav-search{
-    width: 404px;
-    height: 40px;
+    width: 25.25rem; /* 404px / 16 */
+    height: 2.5rem; /* 40px / 16 */
     border: 1px solid;
     border-color: var(--border-color);
 }
 
 .nav-search input{
-    padding-left: 1rem;
+    padding-left: 1rem; /* 16px / 16 */
     height: 100%;
     width: 100%;
 }
 
 .nav-search .search-btn{
-    width: 56px;
-    height: 39px;
+    width: 3.5rem; /* 56px / 16 */
+    height: 2.4375rem; /* 39px / 16 */
     background-color: var(--button-bg);
     border-left: 1px solid;
     border-color: var(--border-color);
 }
 
-/* TODO: Fix button visual feedback on click*/
-
-.navbar-icon {
-    width: 24px;
-    height: 24px;
-    font-size: 18px;
+li.navLinks.user-avatar{
+    width: 2.125rem; /* 34px / 16 */
+    height: 2.125rem; /* 34px / 16 */
+    border-radius: 50%;
+    padding: 0.28125rem; /* 4.5px / 16 */
+    background-color: var(--backgroung-color);
+    border: 1px solid var(--text-secundary-color);
 }
-
-
 
 /*
 * ------------------------------
@@ -273,34 +280,131 @@ h3.heading{
 *
 * ------------------------------
 */
+main{
+    background-color: var(--backgroung-color);
+}
 
 main > div.flex{
-    padding: 5.25rem 1rem;
-    gap: 1.5625rem;
+    width: 100%;
+    height: auto;
+    padding: 5.25rem 1rem 0; /* 84px, 16px / 16 */
+    gap: 1.5625rem; /* 25px / 16 */
+    flex-wrap: wrap;
 }
+
 /*
-
-            Video Player
-
+* ------------------------------
+*
+*           Video Player
+*
+* ------------------------------
 */
-
 main section.video-container{
-    width: 1027px;
-    padding-left: 4.6875rem;
+    width: 59.5rem;
 }
 
 #player-container{
-    width: 952px;
+    width: 59.5rem; /* 952px / 16 */
     align-self: flex-end;
+    gap: 1rem; /* 16px / 16 */
+}
+
+#channel-bar{
+    width: 56.375rem; /* 902px / 16 */
+    height: 2.625rem; /* 42px / 16 */
+    gap: 2.625rem; /* 42px / 16 */
+}
+
+#channel-bar picture{
+    width: 2.625rem; /* 42px / 16 */
+    height: 2.625rem; /* 42px / 16 */
+}
+
+#channel-badge{
+    width: 10rem; /* 160px / 16 */
+    height: 2.625rem; /* 42px / 16 */
+}
+
+#channel-badge-info{
+    width: 6.625rem; /* 106px / 16 */
+    height: 2rem; /* 32px / 16 */
+}
+
+#channel-badge-info p{
+    font-size: 0.875rem; /* 14px / 16 */
+}
+
+h3.video-stats{
+    font-size: 0.875rem; /* 14px / 16 */
+}
+
+#player-container h2, #player-container h3{
+    color: var(--text-primary-color);
+}
+
+#player-container p{
+    color: var(--text-secundary-color);
+}
+
+.video-container button.flex{
+    gap: 0.5rem; /* 8px / 16 */
+    color: var(--text-primary-color);
+    font-size: 0.875rem; /* 14px / 16 */
+}
+
+#player-container p.video-description{
+    width: 31.875rem; /* 510px / 16 */
+    min-height: 4rem; /* 64px / 16 */
+    font-size: 0.875rem; /* 14px / 16 */
+}
+
+#player-container #subscribe-button{
+    width: 9.9375rem; /* 159px / 16 */
+    height: 2.5rem; /* 40px / 16 */
+    background-color: var(--button-color);
+    color: var(--foreground-color);
+    border-radius: 0.125rem; /* 2px / 16 */
+    text-transform: uppercase;
+}
+
+#player-container iframe{
+    width: 59.5rem;
+    height: 33.5625rem;
 }
 
 /*
-
-            Video Cards
-
+* ------------------------------
+*
+*           Video Cards
+*
+* ------------------------------
 */
-main.container aside.video-cards{
-    width: 372px;
+#cards-container{
+    min-width: 23.25rem; /* 372px / 16 */
+    gap: 1rem; /* 16px / 16 */
+}
+
+.card-container{
+    gap: 1rem; /* 16px / 16 */
+}
+
+.card-container picture.image img{
+    max-width: 10rem; /* 160px / 16 */
+    max-height: 5.625rem; /* 90px / 16 */
+}
+
+.card-container .video-card-info{
+    width: 12.25rem; /* 196px / 16 */
+    height: 5.5625rem; /* 89px / 16 */
+}
+
+.card-container .video-card-info h3{
+    color: var(--text-primary-color);
+}
+
+.card-container .video-card-info p{
+    color: var(--text-secundary-color);
+    font-size: 0.75rem; /* 12px / 16 */
 }
 
 /*
@@ -310,4 +414,168 @@ main.container aside.video-cards{
 *
 * ------------------------------
 */
+@media (max-width: 1381px) {
+    main > div.flex{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
 
+    #cards-container.video-cards{
+        align-self: center;
+        max-width: 59.5rem;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .card-container{
+        width: auto;
+        height: auto;
+    }
+}
+
+@media (max-width: 990px) {
+    #player-container iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+    }
+
+    #player-container {
+        width: 100%;
+        padding: 0 1rem; /* Add padding if necessary */
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    main > div.flex {
+        padding: 4rem 1rem; /* Adjust padding for the main flex container */
+        height: auto;
+    }
+
+    main section.video-container {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    #channel-bar {
+        width: 100%;
+        gap: 1rem; /* Adjust gap if necessary */
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    #cards-container {
+        width: 100%;
+        gap: 1rem; /* Adjust gap if necessary */
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .navbar {
+        height: 3rem; /* 48px / 16 */
+        padding: 0 1rem; /* 16px / 16 */
+    }
+
+    .navbar .nav-logo {
+        width: 8rem; /* 128px / 16 */
+    }
+
+    .navbar .nav-logo button i {
+        font-size: 1.25rem; /* 20px / 16 */
+    }
+
+    .navbar .image {
+        width: 5rem; /* 80px / 16 */
+    }
+
+    .navbar .image img {
+        max-height: 1rem; /* 16px / 16 */
+    }
+
+    .nav-search {
+        width: 20rem; /* 320px / 16 */
+    }
+
+    .nav-menu {
+        width: 7rem; /* 112px / 16 */
+    }
+
+    main > div.flex {
+        padding: 4rem 1rem; /* 64px / 16 */
+    }
+
+    main section.video-container {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    #player-container {
+        width: 100%;
+    }
+
+    #channel-bar {
+        width: 100%;
+    }
+
+    #cards-container {
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .navbar {
+        height: 2.5rem; /* 40px / 16 */
+        padding: 0 0.5rem; /* 8px / 16 */
+    }
+
+    .navbar .nav-logo {
+        width: 6rem; /* 96px / 16 */
+    }
+
+    .navbar .nav-logo button i {
+        font-size: 1rem; /* 16px / 16 */
+    }
+
+    .navbar .image {
+        width: 4rem; /* 64px / 16 */
+    }
+
+    .navbar .image img {
+        max-height: 0.75rem; /* 12px / 16 */
+    }
+
+    .nav-search {
+        width: 15rem; /* 240px / 16 */
+    }
+
+    .nav-menu {
+        width: 5rem; /* 80px / 16 */
+    }
+
+    main > div.flex {
+        padding: 3rem 0.5rem; /* 48px, 8px / 16 */
+    }
+
+    main section.video-container {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    #player-container {
+        width: 100%;
+    }
+
+    #channel-bar {
+        width: 100%;
+    }
+
+    #cards-container {
+        width: 100%;
+    }
+}
