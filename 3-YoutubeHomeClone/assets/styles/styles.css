@@ -1,0 +1,184 @@
+/* 
+* ------------------------------
+*
+*           Imports
+*
+* ------------------------------
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* 
+* ------------------------------
+*
+*           Variables
+*
+* ------------------------------
+*/
+:root{
+    --text-primary-color: #000;
+    --text-secundary-color: #515151;
+    --backgroung-color: #F9F9F9;
+    --foreground-color: #FFF;
+    --button-color: #CC0000;
+    --button-bg: #F8F8F8;
+    --border-color: #CCC;
+    --base-size: 16px;
+    font-size: var(--base-size);
+}
+
+/* 
+* ------------------------------
+*
+*           General
+*
+* ------------------------------
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+}
+
+.container{
+    width: 100%;
+    max-width: 1440px;   
+    /* border: 1px solid red; */
+}
+
+h1, h2, h3, p, a, button{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+p, a, button {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+h3{
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+h1{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+}
+
+body{
+    background-color: var(--backgroung-color);
+}
+
+/* 
+* ------------------------------
+*
+*           Navbar
+*
+* ------------------------------
+*/
+
+.navbar{
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;   
+
+    background-color: var(--foreground-color);
+}
+
+#navbar-logo{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#navbar-logo #navbar-menu-btn{
+    width: 24px;
+    height: 24px;
+}
+
+#navbar-menu-btn i{
+    font-size: 24px;
+}
+
+#navbar-searchForm{
+    width: 404px;
+    height: 40px;
+}
+
+#navbar-searchForm form{
+    height: 100%;  
+    
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+#navbar-searchForm form input
+{
+    height: 38px;
+    width: 100%;
+    max-width: 348px;
+    border: 2px solid var(--border-color);
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+
+#navbar-searchForm form button
+{
+    width: 57px;
+    height: 38px;    
+    border: 2px solid var(--border-color);
+    border-left: none;
+    border-radius: 0;
+
+    background-color: var(--button-bg);
+}
+
+#navbar-searchForm form button i
+{
+    font-size: 24px;
+}
+
+
+.navbar-link{
+    display: inline-block;
+    list-style: none;
+}
+
+.navbar-link button{
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+}
+.navbar-link button i{
+    font-size: 24px;
+}
+
+#navbar-menu{
+    width: 130px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar-links-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
