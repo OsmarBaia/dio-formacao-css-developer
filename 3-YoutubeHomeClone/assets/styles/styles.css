@@ -182,3 +182,125 @@ body{
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
+
+/* 
+* ------------------------------
+*
+*           Sidebar
+*
+* ------------------------------
+*/
+
+#sidebar{
+    width: 218px;
+    height: 100vh;
+    background-color: var(--foreground-color);
+    padding: 8px 24px 24px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#sidebar-logo{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    
+    margin-bottom: 24px;
+}
+
+#sidebar-menu-btn i{
+    font-size: 24px;
+}
+
+#sidebar-links{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sidebar-link{
+    list-style: none;
+}
+
+.sidebar-link button{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sidebar-link button i{
+    font-size: 24px;
+}
+
+.sidebar-link button span{
+    font-size: 14px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.sidebar-link:first-child button span{
+    font-weight: 700;
+}
+
+
+/* 
+* ------------------------------
+*
+*           Utils
+*
+* ------------------------------
+*/
+
+.hidden{
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+
+/* 
+* ------------------------------
+*
+*           Animations
+*
+* ------------------------------
+*/
+
+@keyframes slideRigth {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+.sideRightAnimation{
+    animation: slideRigth 0.3s ease-out;
+}
+
+
+
+@keyframes slideLeft {
+    0% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+}
+
+.sideLeftAnimation{
+    animation: slideLeft 0.3s ease-in;
+}
+

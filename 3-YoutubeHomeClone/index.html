@@ -6,13 +6,16 @@
     
     <link rel="stylesheet" href="assets/styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="assets/scripts/main.js" defer></script>
+    
     <title>Youtube - Home</title>
 </head>
 <body>
     <header>
         <div class="container navbar">            
             <div id="navbar-logo">
-                <button aria-label="botão-menu" id="navbar-menu-btn">
+                <button aria-label="botão-abrir-menu" id="navbar-menu-btn">
                     <i class="fa-solid fa-bars"></i>
                 </button>
                 <img src="./assets/images/youtube-logo.png" alt="Youtube Logo">
@@ -34,5 +37,28 @@
             </nav>
         </div>
     </header>
+    <aside id="sidebar" class="hidden">
+        <div id="sidebar-logo">
+            <button aria-label="botão-fechar-menu" id="sidebar-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <img src="./assets/images/youtube-logo.png" alt="Youtube Logo">
+        </div>
+        <ul id="sidebar-links">
+            <li class="sidebar-link"><button><i class="fa-solid fa-house"></i><span>Início</span></button></li>
+            <li class="sidebar-link"><button><i class="fa-solid fa-compass"></i><span>Explorar</span></button></li>
+            <li class="sidebar-link"><button><i class="fa-brands fa-youtube"></i><span>Inscrições</span></button></li>
+            <li class="sidebar-link"><button><i class="fa-solid fa-compact-disc"></i><span>YouTube Music</span></button></li>
+            <li class="sidebar-link"><button><i class="fa-solid fa-thumbs-up"></i><span>Vídeos que gostei</span></button></li>
+            <li class="sidebar-link"><button><i class="fa-solid fa-clock"></i><span>Assistir mais tarde</span></button></li>
+            <li class="sidebar-link"><button><i class="fa-solid fa-download"></i><span>Downloads</span></button></li>
+            <li class="sidebar-link"><button><i class="fa-solid fa-film"></i><span>Filmes</span></button></li>
+            <li class="sidebar-link"><button><i class="fa-solid fa-book"></i><span>Aprender</span></button></li>
+            <li class="sidebar-link"><button><i class="fa-solid fa-medal"></i><span>Esportes</span></button></li>
+        </ul>
+    </aside>
+    <main>
+
+    </main>
 </body>
 </html>
