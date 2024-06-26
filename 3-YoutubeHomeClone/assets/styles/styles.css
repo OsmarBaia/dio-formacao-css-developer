@@ -52,12 +52,12 @@ h1, h2, h3, p, a, button{
 }
 
 p, a, button {
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: 500;
 }
 
 h3{
-    font-size: 1.125rem;
+    font-size: 0.875rem;
     font-weight: 600;
 }
 
@@ -74,7 +74,6 @@ h1{
 button{
     background-color: transparent;
     border: none;
-    border-radius: 50%;
 }
 
 body{
@@ -108,6 +107,15 @@ body{
 #navbar-logo #navbar-menu-btn{
     width: 24px;
     height: 24px;
+}
+
+#navbar-logo picture{
+    width: 90px;
+    height: 20px;
+}
+
+#navbar-logo picture img{
+    width: 100%;
 }
 
 #navbar-menu-btn i{
@@ -212,6 +220,15 @@ body{
     margin-bottom: 24px;
 }
 
+#sidebar-logo picture{
+    width: 90px;
+    height: 20px;
+}
+
+#sidebar-logo picture img{
+    width: 100%;
+}
+
 #sidebar-menu-btn i{
     font-size: 24px;
 }
@@ -250,6 +267,83 @@ body{
 /* 
 * ------------------------------
 *
+*           Main
+*
+* ------------------------------
+*/
+
+#cards-container{  
+    width: 100%;
+    padding: 24px;
+    padding-left: 242px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(242px, 1fr));    
+    
+    align-content: start;
+    justify-items: center;
+    
+    gap: 14px;
+}
+
+#cards-container.sidebar-padding {
+    padding-left: 24px;
+    /* grid-template-columns: repeat(auto-fit, minmax(242px, 1fr));  */
+}
+
+.video-card{
+    width: 282px;
+    height: 262px;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-areas: 
+    "video-thumbnail"
+    "video-description";
+
+    gap: 1rem;
+    text-align: left;
+}
+
+.video-card-banner{
+    width: 100%; height: auto;
+    grid-area: video-thumbnail;
+    align-self: center;
+    justify-self: center;
+}
+
+.video-card-banner img{
+    width: 100%; height: auto;
+}
+
+.video-card-info{
+    width: 100%; height: auto;
+    grid-area: video-description;
+    align-self: center;
+    justify-self: center;
+
+    display: grid;
+    
+    grid-template-areas: 
+    "channel-avatar video-title"
+    "channel-avatar video-description";   
+    gap: 10px;
+}
+
+.video-card-channel{
+    grid-area: channel-avatar;
+    width: 42px;
+    height: 42px;
+}
+
+p.video-card-description{
+    color: var(--text-secundary-color);
+}
+
+
+
+/* 
+* ------------------------------
+*
 *           Utils
 *
 * ------------------------------
@@ -262,7 +356,6 @@ body{
 .active{
     display: block;
 }
-
 
 /* 
 * ------------------------------
