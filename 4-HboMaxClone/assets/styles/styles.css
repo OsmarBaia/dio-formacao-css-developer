@@ -10,7 +10,7 @@
     --btn-link-color: #000;
     --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
     --divider-bg-color: linear-gradient(90deg, #5516ba, rgba(255, 0, 229, 0.5) 80%);
-    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --nav-bg-color: rgba(0, 0, 0, 0.8);
     --text-color: #fff;
     --link-color: #9e86ff;
     --form-bg-color: rgba(211, 211, 211, 0.06);
@@ -20,7 +20,6 @@
     --form-field-error: rgb(255, 76, 76);
     --font-primary: "Raleway", sans-serif;
     --font-secondary: "Quicksand", sans-serif;
-
     scroll-behavior: smooth;
 }
 
@@ -77,6 +76,8 @@ main {
     align-items: center;
     background: var(--nav-bg-color);
     z-index: 1;
+
+    transition: transform 0.3s ease-in-out;
 }
 
 .menu__logo {
@@ -95,6 +96,11 @@ main {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.125rem;
+}
+
+.menu.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Buttons */
@@ -325,6 +331,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
+    overflow-x: auto;
 }
 
 .contents__card {
@@ -445,6 +452,101 @@ main {
     height: 100%;
     object-fit: cover;
 }
+
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+    section {
+        scroll-margin-top: 120px;
+    }
+
+    .menu {
+        padding: 32px 24px;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .menu__logo {
+        max-width: 100px;
+    }
+
+    .menu__item--button {
+        margin: 0;
+    }
+
+    .header {
+        margin-top: 128px !important;
+    }
+
+    .footer__link {
+        display: block;
+        margin-bottom: 16px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .subscription__plans {
+        gap: 40px;
+    }
+
+    .contents__container {
+        gap: 32px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .subscription__plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscription__card {
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .contents__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .subscription__price {
+        font-size: 1.5rem;
+    }
+
+    .subscription__description {
+        font-size: 1rem;
+    }
+
+    .subscription__plan {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .subscription__card {
+        padding: 40px;
+    }
+
+    .contents__container {
+        grid-template-columns: repeat(6, 100%);
+        grid-auto-flow: column;
+        overflow: auto hidden;
+    }
+}
+
+@media (pointer: coarse) {
+    .contents__card:hover {
+        transform: none;
+    }
+
+    .subscription__plans:has(.subscription__card:nth-child(1):hover) .subscription__card:nth-child(2),
+    .subscription__plans:has(.subscription__card:nth-child(2):hover) .subscription__card:nth-child(1) {
+        transform: none;
+    }
+}
+
 
 /* Animations */
 
