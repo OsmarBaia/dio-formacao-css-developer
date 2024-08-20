@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./assets/styles/styles.css">
+  <link rel="stylesheet" href="./assets/styles/styles.css">
 
-    <title>HBO Max</title>
+  <title>HBO Max</title>
 </head>
+
 <body>
   <nav class="menu">
     <a href="index.html" class="menu__logo">
@@ -15,10 +17,39 @@
     </a>
     <div>
       <a href="signIn.html" class="menu__item">Entrar</a>
-      <a href="#subscription" class="menu__item menu__item--button button">
+      <button href="#subscription" class="menu__item menu__item--button button">
         Assine Agora
-      </a>
+      </button>
     </div>
   </nav>
+  <header class="header">
+    <div class="header__content">
+      <div class="header__channels">
+        <img class="header__channel" src="assets/images/hbo.png" alt="HBO" />
+        <img class="header__channel" src="assets/images/dc.png" alt="DC" />
+        <img class="header__channel" src="assets/images/wb.png" alt="Warner Bross" />
+        <img class="header__channel" src="assets/images/cartoon-network_neutral.png" alt="Cartoon Network" />
+        <img class="header__channel" src="assets/images/max_originals.png" alt="Max Originals" />
+      </div>
+      <h1 class="header__title">
+        <span class="header__title--light">Curta as melhores histórias</span>
+        Para todo mundo
+      </h1>
+      <div class="divider"></div>
+      <div class="offer">
+        <p>Assinaturas a partir de</p>
+        <p class="offer__price">
+          R$14,15 <span class="offer__price--small">/mês*</span>
+        </p>
+      </div>
+      <button href="#subscription" class="button button--gradient header__button">
+        Assine agora
+      </button>
+      <p class="text--small">
+        *aplicável ao plano anual com o pagamento antecipado.
+      </p>
+    </div>
+  </header>
 </body>
+
 </html>
