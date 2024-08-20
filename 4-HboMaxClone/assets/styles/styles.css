@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(45deg,
+            #9b34ef 0%,
+            #490cb0 20%,
+            transparent 50%);
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(90deg,
+            #5516ba,
+            rgba(255, 0, 229, 0.5) 80%);
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+}
+
+/* General */
+* {
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+  
+  p {
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  section {
+    scroll-margin-top: 5rem;
+}
+
+.text--small {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Navbar */
+
+.menu {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nav-bg-color);
+    z-index: 1;
+}
+
+.menu__logo {
+    max-width: 10rem;
+}
+
+.menu__logo-image {
+    width: 100%;
+}
+
+.menu__item {
+    margin-right: 1.5rem;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+}
+
+.menu__item--button {
+    padding: 0.5rem 1.625rem;
+    transition: background 1s, color 1s;
+}
+
+.menu__item--button:hover {
+    background-color: var(--btn-link-bg-color);
+    color: var(--btn-link-color);
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 0.625rem; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
