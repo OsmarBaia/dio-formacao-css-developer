@@ -63,8 +63,8 @@ main {
     margin: auto;
     padding: 1.5rem;
     text-align: center;
-  }
-  
+}
+
 
 /* Navbar */
 .menu {
@@ -140,6 +140,7 @@ main {
     outline: none;
     box-shadow: 0 0 0 0.1875rem var(--secondary-color);
 }
+
 .pulse-button {
     animation: pulse 5.2s linear infinite;
 }
@@ -244,18 +245,18 @@ main {
     background: url("../images/background-movies-series.png") no-repeat;
     background-size: cover;
     position: relative;
-  }
-  
-  .subscription__plans {
+}
+
+.subscription__plans {
     display: flex;
     justify-content: space-around;
     gap: 5rem;
     margin: 2.5rem 0;
     perspective: 2000px;
     perspective-origin: top;
-  }
-  
-  .subscription__card {
+}
+
+.subscription__card {
     background: var(--card-bg-color);
     padding: 2.5rem 3.75rem;
     border-radius: .5rem;
@@ -264,143 +265,185 @@ main {
     flex-direction: column;
     justify-content: space-between;
     transition: transform 1s ease-in-out;
-  }
+}
 
-  .subscription__plans:has(.subscription__card:nth-child(1):hover) .subscription__card:nth-child(1){
+.subscription__plans:has(.subscription__card:nth-child(1):hover) .subscription__card:nth-child(1) {
     transform: scale(1.02);
-  }
+}
 
-  .subscription__plans:has(.subscription__card:nth-child(2):hover) .subscription__card:nth-child(2){
+.subscription__plans:has(.subscription__card:nth-child(2):hover) .subscription__card:nth-child(2) {
     transform: scale(1.02);
-  }
+}
 
-  .subscription__plans:has(.subscription__card:nth-child(1):hover)
-    .subscription__card:nth-child(2) {
+.subscription__plans:has(.subscription__card:nth-child(1):hover) .subscription__card:nth-child(2) {
     transform: scale(0.98);
-  }
-  
-  .subscription__plans:has(.subscription__card:nth-child(2):hover)
-    .subscription__card:nth-child(1) {
+}
+
+.subscription__plans:has(.subscription__card:nth-child(2):hover) .subscription__card:nth-child(1) {
     transform: scale(0.98);
-  }
-  
-  .subscription__description {
+}
+
+.subscription__description {
     text-align: left;
     list-style: none;
     font-size: 1.25rem;
     margin-bottom: .875rem;
     padding-left: .875rem;
-  }
-  
-  .subscription__price {
+}
+
+.subscription__price {
     font-size: 2rem;
     font-family: "Raleway", sans-serif;
     color: var(--secondary-color);
     font-weight: 700;
-  }
-  
-  .subscription__price .text--small {
+}
+
+.subscription__price .text--small {
     color: var(--text-color);
-  }
-  
-  .subscription__description::marker {
+}
+
+.subscription__description::marker {
     content: "+";
     font-size: 2rem;
     margin: 0 .5rem 0 0;
-  }
-  
-  .subscription__plan {
+}
+
+.subscription__plan {
     display: flex;
     justify-content: space-between;
     font-size: 1.25rem;
     margin-bottom: 1rem;
-  }
-  
-  /* Contents */
-  .contents {
+}
+
+/* Contents */
+.contents {
     margin: 6.25px auto;
-  }
-  
-  .contents__container {
+}
+
+.contents__container {
     margin-top: 2.5rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
-  }
-  
-  .contents__card {
+}
+
+.contents__card {
     border-radius: 16px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border: 2px solid transparent;
     transition: transform 0.8s, background 0.8s, border 1s;
-  }
-  
-  .contents__card:hover {
+}
+
+.contents__card:hover {
     transform: scale(1.05);
     border: 2px solid var(--tertiary-color);
-  }
-  
-  .contents__card:hover .contents__image {
+}
+
+.contents__card:hover .contents__image {
     opacity: 0;
-  }
-  
-  .contents__image {
+}
+
+.contents__image {
     width: 100%;
     object-fit: cover;
     object-position: center;
     transition: opacity 2s;
-  }
-  
-  /* HBO Content */
-  
-  .contents__card:nth-child(1):hover {
+}
+
+/* HBO Content */
+
+.contents__card:nth-child(1):hover {
     background-image: url("../images/hbo-hover_0.webp");
-  }
-  
-  /* Max Originals Content */
-  
-  .contents__card:nth-child(2):hover {
+}
+
+/* Max Originals Content */
+
+.contents__card:nth-child(2):hover {
     background-image: url("../images/MAX-Hover.webp");
-  }
-  
-  /* DC Content */
-  
-  .contents__card:nth-child(3):hover {
+}
+
+/* DC Content */
+
+.contents__card:nth-child(3):hover {
     background-image: url("../images/DC-Hover.webp");
-  }
-  
-  /* WB Content */
-  
-  .contents__card:nth-child(4):hover {
+}
+
+/* WB Content */
+
+.contents__card:nth-child(4):hover {
     background-image: url("../images/WB-Hover.webp");
-  }
-  
-  /* CN Content */
-  
-  .contents__card:nth-child(5):hover {
+}
+
+/* CN Content */
+
+.contents__card:nth-child(5):hover {
     background-image: url("../images/CN-Hover.png");
-  }
-  
-  /* Champions League Content */
-  
-  .contents__card:nth-child(6):hover {
+}
+
+/* Champions League Content */
+
+.contents__card:nth-child(6):hover {
     background-image: url("../images/UCL-Hover.webp");
-  }
-
-/* Custom Scroll */
-::-webkit-scrollbar {
-    width: 0.5rem;
 }
 
-::-webkit-scrollbar-thumb {
-    background: var(--tertiary-color);
-    border-radius: 0.625rem;
+
+/* Footer */
+.footer__link {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: var(--link-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 .875rem;
+    letter-spacing: 2px;
+    transition: color 0.5s;
+    font-size: 0.875rem;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary-color);
+.footer__link:hover {
+    color: var(--text-color);
+}
+
+.footer__legal {
+    font-size: 0.75rem;
+    margin: 1rem 0;
+    color: var(--link-color);
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+
+.footer__social-link {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: var(--link-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 .875rem;
+    letter-spacing: 2px;
+    transition: color 0.5s;
+    font-size: 0.875rem;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.footer__social-link:hover {
+    color: var(--text-color);
+}
+
+.footer__social-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Animations */
@@ -420,7 +463,7 @@ main {
 }
 
 
-@keyframes pulse { 
+@keyframes pulse {
     0% {
         transform: scale(1);
     }
@@ -432,4 +475,19 @@ main {
     100% {
         transform: scale(1);
     }
+}
+
+
+/* Custom Scroll */
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 0.625rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
 }
