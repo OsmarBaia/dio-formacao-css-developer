@@ -270,7 +270,7 @@ main {
     min-height: 600px;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 1s ease-in-out;
+    transition: transform .5s ease-in-out;
 }
 
 .subscription__plans:has(.subscription__card:nth-child(1):hover) .subscription__card:nth-child(1) {
@@ -331,6 +331,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
+    padding: 1rem;
     overflow-x: auto;
 }
 
