@@ -3,12 +3,12 @@ const navbar = document.querySelector('nav.menu');
 let lastScrollY = window.scrollY;
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > lastScrollY) {
-    navbar.classList.add('hidden');
-  } else {
-    navbar.classList.remove('hidden');
-  }
-  lastScrollY = window.scrollY;
+    if (window.scrollY > lastScrollY) {
+        navbar.classList.add('hidden');
+    } else {
+        navbar.classList.remove('hidden');
+    }
+    lastScrollY = window.scrollY;
 });
 
 // Evento de rolagem do conteúdo
@@ -20,28 +20,31 @@ const intervalo_rolagem = 3500;
 
 function moveScrollToNextCard() {
     if (window.innerWidth <= 480) {
-      currentCardIndex = (currentCardIndex + 1) % contentsCards.length;
-      contentsCards[currentCardIndex].scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest'
-      });
+        currentCardIndex = (currentCardIndex + 1) % contentsCards.length;
+        const card = contentsCards[currentCardIndex];
+        if (card.getBoundingClientRect().bottom < window.innerHeight) {
+            card.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest'
+            });
+        }
     }
-  }
+}
 
 function startInterval() {
-  intervalId = setInterval(moveScrollToNextCard, intervalo_rolagem);
+    intervalId = setInterval(moveScrollToNextCard, intervalo_rolagem);
 }
 
 function stopInterval() {
-  clearInterval(intervalId);
+    clearInterval(intervalId);
 }
 
 window.addEventListener('resize', () => {
-  if (window.innerWidth <= 480) {
-    startInterval();
-  } else {
-    stopInterval();
-  }
+    if (window.innerWidth <= 480) {
+        startInterval();
+    } else {
+        stopInterval();
+    }
 });
 
 startInterval();
