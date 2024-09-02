@@ -1,27 +1,46 @@
-# Formação HTML Developer
-<div align="center">
-  <img align="left" height="180rem" alt="Badge Formação CSS Developer" src="https://hermes.dio.me/tracks/da043c7a-7189-441e-bf28-adc2d05a4934.png"/>
-  <div align="left">
-    
-  ## Resumo
-Durante a Formação CSS Developer da Digital Innovation One (DIO), adquiri habilidades fundamentais e avançadas em CSS, começando pelos fundamentos e estruturação de estilos, onde aprendi sobre estilizações básicas e unidades de medida. Em seguida, me aprofundei em técnicas de layout, como Flexbox e Grid Layouts, além de desenvolver designs responsivos que se adaptam a diferentes dispositivos. Participei de desafios práticos, como clonar páginas de sites populares, o que me permitiu aplicar e consolidar esses conhecimentos. Finalmente, explorei recursos mais avançados, como Pseudo-elementos, Pseudo-classes, Transições e Animações, e comecei a utilizar frameworks como Bootstrap para agilizar o desenvolvimento. O curso foi coroado com o desafio de clonar o site da HBO Max, onde pude aplicar todas as técnicas aprendidas para criar uma interface visualmente atraente e funcional. 
+# HBO Max "Clone"
 
-  </div>
-</div>
+<p align="center">
+  O projeto é um clone do site <a href="https://www.hbomax.com/br/pt">HBO Max</a>, com o intuito de reproduzir a interface, com algumas modificações, aplicando os temas abordados ao longo das aulas de CSS da plataforma da <a href="https://dio.me">Digital Innovation One</a>.
+</p>
+<p align="center">
+  O clone do site HBO Max serve como desafio para os alunos da plataforma testarem seus conhecimentos e colocarem em prática os recursos de HTML e CSS abordados nos cursos.
+</p>
 
-<br>
+<h2 id="features">Features</h2>
 
-## Projeto mais relevante
-O projeto consiste em um clone do site HBO Max na DIO, como desafio para praticar os conhecimentos em HTML e CSS. Ele busca reproduzir a interface do site original com algumas modificações e inclui funcionalidades visuais, como um menu de navegação, cabeçalho com animação gradiente, cards animados de planos de assinatura, lista de filmes e séries, formulário de login, e um rodapé com links importantes. O foco é na interface, sem integração com APIs, utilizando recursos como Grid Layout, Flexbox, Responsividade, Pseudo-elementos, Transformações 2D e 3D, Transições, Animações, e tratamento de campos inválidos no formulário.
+- Menu de navegação
+- Cabeçalho com animação gradiente
+- Cards com os planos de assinatura animados
+- Lista de filmes e séries disponíveis na plataforma
+- Formulário de login
+- Rodapé com links importantes
+- UI Responsiva
 
-[Live Demo](https://osmarbaia.github.io/dio-formacao-css-developer/)
+*As features são visuais, não possuindo integração com nenhuma API. O intuito do projeto é reproduzir a interface do site original, com algumas modificações.*
 
-![Project Preview](https://raw.githubusercontent.com/OsmarBaia/dio-formacao-css-developer/main/4-HboMaxClone/assets/images/readme-images/1.png)
+<h2 id="topics"> Temas abordados</h2>
 
-## Certificado
+O projeto possui como intuito aplicar os conceitos abordados na Trilha de CSS da <a href="https://dio.me">DIO</a>, ministrada pela instrutora <a href="https://github.com/micheleambrosio">Michele Ambrosio</a>.
 
-<div align="center">
-  
-![Certification Preview](https://hermes.dio.me/certificates/cover/JSLTYYEP.jpg)
+Recursos CSS presentes no projeto:
 
-</div>
+- Fundamentos do CSS
+- Grid Layout
+- Flexbox
+- Responsividade
+- Pseudo-elementos
+- Pseudo-classes
+- Transformações 2D e 3D
+- Transições e animações
+- Tratamento de campos inválidos no formulário
+
+## Resultado
+### Home Preview
+![Home Page Preview](assets/images/readme-images/1.png)
+
+
+### SignIn Preview
+![SignIn LandScape Preview](assets/images/readme-images/2.png)
+
+![SignIn Portrait Preview](assets/images/readme-images/3.png)
